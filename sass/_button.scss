@@ -1,0 +1,55 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.8rem;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  line-height: calc(28 / 18);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: fit-content;
+  padding: 1.6rem 3.2rem; // normal size
+
+  &--medium {
+    padding: 1.4rem 3.2rem; // medium size
+    font-size: 1.6rem;
+    line-height: calc(24 / 16);
+  }
+
+  &--small {
+    padding: 0rem 3.2rem; // small size
+    font-size: 1.4rem;
+    line-height: calc(16 / 14);
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-neutral-white;
+    border: 0.2rem solid transparent;
+
+    &:focus {
+      border: 0.2rem solid $color-neutral-d-grey;
+    }
+  }
+
+  &--secondary {
+    color: $color-primary;
+    border: 0.1rem solid $color-primary;
+
+    &:hover {
+      background-color: $color-neutral-sliver;
+    }
+
+    &:focus {
+      border: 0.1rem solid $color-neutral-d-grey;
+    }
+  }
+
+  &--disabled {
+    color: $color-neutral-grey-blue;
+    background-color: $color-neutral-sliver;
+  }
+}

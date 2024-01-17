@@ -1,0 +1,111 @@
+.customer {
+  background-color: $color-neutral-sliver;
+  margin-bottom: 4.8rem;
+
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3.2rem 0rem;
+    gap: 7.8rem;
+
+    @include responsive(tablet) {
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    @include responsive(laptop) {
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    @include responsive(portrait-phone) {
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+
+  &__avatar {
+    width: 32.6rem;
+    height: 32.6rem;
+    flex-shrink: 0;
+    border-radius: 0.8rem;
+    margin: 0 auto;
+
+    @include responsive(portrait-phone) {
+      width: 20.6rem;
+      height: 20.6rem;
+    }
+
+    @include responsive(tablet) {
+      width: 20.6rem;
+      height: 20.6rem;
+    }
+  }
+
+  &-review {
+    max-width: 100%;
+  }
+
+  &__message {
+    margin-bottom: 1.6rem;
+  }
+
+  &__author {
+    margin-bottom: 0.8rem;
+    color: $color-primary;
+    font-size: 2rem;
+    line-height: calc(28 / 20);
+    font-weight: 600;
+  }
+
+  &__from {
+    margin-bottom: 3.2rem;
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: 4.1rem;
+
+    @include responsive(portrait-phone) {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+    }
+  }
+
+  &-logo {
+    display: flex;
+    gap: 3.6rem;
+
+    @include responsive(portrait-phone) {
+      flex-direction: column;
+    }
+
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 4.8rem;
+    max-height: 4.8rem;
+
+    @include responsive(portrait-phone) {
+      flex-shrink: 0;
+    }
+
+    &:first-child {
+      background-color: $color-tint-5;
+      border-radius: 0.8rem;
+      color: #5417d7;
+      padding-right: 0.765rem;
+      padding-bottom: 0.761rem;
+    }
+
+    & > img {
+      scroll-snap-align: start;
+    }
+  }
+}

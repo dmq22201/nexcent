@@ -1,0 +1,129 @@
+.header {
+  background-color: $color-neutral-sliver;
+
+  &-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 8.4rem;
+  }
+
+  &-nav {
+    align-items: center;
+    display: flex;
+    gap: 5rem;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      font-weight: 500;
+    }
+
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+
+  &-action {
+    align-items: center;
+    display: flex;
+    gap: 3.4rem;
+
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+
+  &-button-mobile {
+    display: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0 2rem;
+
+    @include responsive(tablet) {
+      display: block;
+    }
+
+    &-close {
+      display: none;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      padding: 2rem;
+
+      @include responsive(tablet) {
+        display: block;
+      }
+    }
+  }
+
+  &-mobile {
+    &,
+    &-nav {
+      display: flex;
+      flex-direction: column;
+
+      &:first-child {
+        border-top: 0.1rem solid #ccc;
+      }
+    }
+
+    &-action {
+      display: flex;
+      padding: 2rem;
+      justify-content: space-around;
+      border-top: 0.1rem solid #ccc;
+    }
+
+    &-nav {
+      & > &__link {
+        padding: 2rem;
+      }
+    }
+  }
+
+  &-sidebar {
+    position: fixed;
+    width: 30rem;
+    height: 100vh;
+    background-color: $color-neutral-sliver;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    transform: translateX(100%);
+    transition: all 0.25s;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    &-overlay {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 3;
+      backdrop-filter: blur(1rem);
+      transition: all 0.25s;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &-button--padding {
+    padding: 1rem 2rem;
+  }
+
+  &-button--fontSize {
+    font-size: 1.4rem;
+    line-height: calc(20 / 14);
+  }
+}

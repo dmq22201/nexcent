@@ -1,0 +1,25 @@
+@mixin responsive($device) {
+  @if $device == landscape-phone {
+    @media only screen and (max-width: 47.99875em) {
+      @content;
+    } // 767.98px / 1em(16px) =
+  }
+
+  @if $device == portrait-phone {
+    @media only screen and (max-width: 35.99875em) {
+      @content;
+    } // 575.98px / 1em(16px) =
+  }
+
+  @if $device == tablet {
+    @media only screen and (max-width: 61.99875em) {
+      @content;
+    } // 991.98px / 1em(16px) =
+  }
+
+  @if $device == laptop {
+    @media only screen and (max-width: 74.99875em) {
+      @content;
+    } // 1199.98px / 1em(16px) =
+  }
+}

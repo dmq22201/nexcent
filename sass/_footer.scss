@@ -1,0 +1,123 @@
+.footer {
+  background-color: $color-neutral-black;
+
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 6.4rem 0rem;
+
+    @include responsive(portrait-phone) {
+      flex-direction: column;
+      gap: 8rem;
+    }
+
+    @include responsive(tablet) {
+      flex-direction: column;
+      gap: 8rem;
+    }
+  }
+
+  &-follow {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: fit-content;
+  }
+
+  &__logo {
+    width: 19.1rem;
+    height: auto;
+  }
+
+  &-copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    color: $color-neutral-sliver;
+  }
+
+  &-socials {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &-right {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-grow: 1;
+
+    @include responsive(portrait-phone) {
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    @include responsive(tablet) {
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 16rem;
+  }
+
+  &-group {
+    &__title {
+      color: $color-neutral-white;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__link {
+    color: $color-neutral-sliver;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: calc(20 / 14);
+    width: fit-content;
+  }
+
+  &-form {
+    background-color: rgba($color-neutral-white, 0.2);
+    width: 25.5rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__input {
+    padding: 0.9rem 1.2rem;
+    border-radius: 0.8rem;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    line-height: calc(20 / 14);
+    color: #d9dbe1;
+    background-color: transparent;
+
+    &::placeholder {
+      color: #d9dbe1;
+    }
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-right: 1.2rem;
+    background-color: transparent;
+    height: 100%;
+
+    img {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}

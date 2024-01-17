@@ -1,0 +1,12 @@
+.demo {
+  background-color: $color-neutral-sliver;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 3.2rem 0rem;
+  }
+}

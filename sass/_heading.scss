@@ -1,0 +1,17 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  &__title {
+    color: $color-neutral-d-grey;
+
+    &--block {
+      display: block;
+    }
+
+    &--color {
+      color: $color-primary;
+    }
+  }
+}

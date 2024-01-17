@@ -1,0 +1,79 @@
+.community {
+  margin-bottom: 4.2rem;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  &-item {
+    width: 29.9rem;
+    height: 28rem;
+    background-color: $color-neutral-white;
+    box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.2);
+    padding: 2.4rem 3.2rem;
+
+    @include responsive(portrait-phone) {
+      flex-shrink: 0;
+      scroll-snap-align: start;
+    }
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    width: 6.5rem;
+    height: 5.6rem;
+    margin-bottom: 1.6rem;
+    position: relative;
+
+    img {
+      position: absolute;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      border-radius: 1.8rem 0.5rem 1rem 0.5rem;
+      transform: rotate(180deg);
+
+      background-color: $color-tint-5;
+      width: 5rem;
+      height: 4.9rem;
+    }
+  }
+
+  &__heading {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}

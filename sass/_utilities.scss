@@ -1,0 +1,36 @@
+.text--large {
+  font-size: 2rem;
+  line-height: calc(28 / 20);
+}
+
+.text--medium {
+  font-size: 1.8rem;
+  line-height: calc(28 / 18);
+}
+
+.text--normal {
+  font-size: 1.6rem;
+  line-height: calc(24 / 16);
+}
+
+.text--small {
+  font-size: 1.4rem;
+  line-height: calc(20 / 14);
+}
+
+.text--extra-small {
+  font-size: 1.2rem;
+  line-height: calc(16 / 12);
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.m--center {
+  margin: 0 auto;
+}
